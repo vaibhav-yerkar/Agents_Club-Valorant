@@ -9,7 +9,7 @@ module.exports = {
         'orb':['"Orbitron", sans-serif']
       },
       screens:{
-        'xsm': '412px',
+        'xsm': '448px',
       }
     },
   },

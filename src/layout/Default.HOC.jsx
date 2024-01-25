@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer.Component.jsx';
 const DefaultHOC = (Component) =>
 ({...props}) => {
     return (
-        <div>
+        <div className='font-orb'>
             <video
                 tabIndex="-1"
                 preload='true'
@@ -20,9 +20,11 @@ const DefaultHOC = (Component) =>
                 type='video/mp4'
                 />
             </video>
-            <div className='absolute text-white overflow-hidden w-full h-full bg-black bg-opacity-30'>
-                <Navbar />
-                <Component {...props}/>
+            <div className='absolute text-white w-full bg-black bg-opacity-50'>
+                <Navbar/>
+                <div className='pt-24'>
+                    <Component {...props}/>
+                </div>
                 <Footer />
             </div>
         </div>

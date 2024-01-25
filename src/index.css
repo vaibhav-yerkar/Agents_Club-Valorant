@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* SCROLLBAR CUSTOMIZATION */
+
+/* For browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(240,60,60); /* color of the scrollbar thumb */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000; /* color of the scrollbar track */
+}
+
+/* For Firefox */
+/* properties like border-radius won't work in Firefox */
+* {
+    scrollbar-color: rgb(240,60,60) #000; /* thumb and track colors */
+}
+
+/* For Microsoft Edge and IE */
+/* Note: Edge and IE support a different syntax for scrollbar customization */
+* {
+    scrollbar-base-color: rgb(240,60,60); /* color of the scrollbar track */
+    scrollbar-face-color: rgb(240,60,60); /* color of the scrollbar thumb */
+    scrollbar-arrow-color: #000; /* color of the scrollbar arrows */
+    scrollbar-shadow-color: #000; /* color of the scrollbar shadow */
+    scrollbar-highlight-color: #000; /* color of the scrollbar highlight */
+    scrollbar-3dlight-color: #000; /* color of the scrollbar light */
+    scrollbar-darkshadow-color: #000; /* color of the scrollbar dark shadow */
+}
