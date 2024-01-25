@@ -18,7 +18,8 @@ const NavSm = () => {
             <div className='flex flex-row justify-between px-4 py-4 fixed w-full bg-black bg-opacity-80'>
                 <Link to="/" className='opacity-90 hover:opacity-100'>
                     <img 
-                    src="https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png" alt="Valorant-Home"
+                    src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
+                    alt="Valorant-Home"
                     className='aspect-auto w-20'
                     />
                 </Link>
@@ -29,19 +30,19 @@ const NavSm = () => {
                     <div id="dropDownMenu"
                     className='hidden absolute min-w-40 z-1 bg-black bg-opacity-50'>
                         <Link to="/weapons">
-                            <h5 href="https://google.com"
+                            <h5 
                             className='hover:text-red-500 font-semibold '>
                                 Arsenal
                             </h5>
                         </Link>
                         <Link to="/weapons">
-                            <h5 href="https://google.com"
+                            <h5 
                             className='hover:text-red-500 font-semibold '>
                                 Weapons
                             </h5>
                         </Link>
                         <Link to="/weapons">
-                            <h5 href="https://google.com"
+                            <h5 
                             className='hover:text-red-500 font-semibold '>
                                 Contact
                             </h5>
@@ -59,25 +60,26 @@ const NavLg = () => {
             <div className='px-4 py-4 flex flex-row gap-2 justify-between h-auto fixed top-0 left-0 w-full bg-black bg-opacity-80'>
                 <Link to="/" className='opacity-90 hover:opacity-100'>
                     <img 
-                    src="https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png" alt="Valorant-Home"
+                    src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
+                    alt="Valorant-Home"
                     className='aspect-auto w-20'
                     />
                 </Link>
                 <div className='pe-6 flex flex-row gap-5 tracking-widest pt-4 text-sm'>
                     <Link to="/weapons">
-                        <h5 href="https://google.com"
+                        <h5 
                         className='hover:text-red-500  font-semibold '>
                             Arsenal
                         </h5>
                     </Link>
                     <Link to="/weapons">
-                        <h5 href="https://google.com"
+                        <h5 
                         className='hover:text-red-500 font-semibold '>
                             Weapons
                         </h5>
                     </Link>
                     <Link to="/weapons">
-                        <h5 href="https://google.com"
+                        <h5 
                         className='hover:text-red-500 font-semibold '>
                             Contact
                         </h5>
