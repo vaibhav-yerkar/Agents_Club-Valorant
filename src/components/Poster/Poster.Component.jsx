@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Poster = (props) => {
-    let {agentArray} = props;
+    // let {agentArray} = props;
     // {console.log(agentArray.map((item)=>([item.displayName, item.fullPortraitV2])))};
     return (
         <>

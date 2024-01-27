@@ -8,16 +8,26 @@ import Footer from '../components/Footer/Footer.Component.jsx';
 
 const DefaultHOC = (Component) =>
 ({...props}) => {
+    var bgPosterLink;
+    var bgVideoLink;
+    if(Component.name === 'HomePage'){
+        bgPosterLink = process.env.REACT_APP_HOME_PAGE_BG_POSTER;
+        bgVideoLink = process.env.REACT_APP_HOME_PAGE_BG_VIDEO;
+    }
+    else if(Component.name === 'AgentPage'){
+        bgPosterLink=process.env.REACT_APP_AGENTS_PAGE_BG_POSTER;
+        bgVideoLink=process.env.REACT_APP_AGENTS_PAGE_BG_VIDEO;
+    }
     return (
         <div className='font-orb'>
             <video
                 tabIndex="-1"
                 preload='true'
-                className='fixed left-0 top-0 h-full w-full overflow-hidden object-cover'
-                poster={process.env.REACT_APP_HOME_PAGE_BG_POSTER}
+                className='fixed left-0 top-0 h-full w-full overflow-hidden object-cover bg-scroll'
+                poster={bgPosterLink}
                 muted loop autoPlay
                 ><source 
-                src={process.env.REACT_APP_HOME_PAGE_BG_VIDEO}
+                src={bgVideoLink}
                 type='video/mp4'
                 />
             </video>

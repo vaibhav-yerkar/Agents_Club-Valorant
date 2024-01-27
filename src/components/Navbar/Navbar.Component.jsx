@@ -15,7 +15,7 @@ const NavSm = () => {
 
     return (
         <>
-            <div className='flex flex-row justify-between px-4 py-4 fixed w-full bg-black bg-opacity-80'>
+            <div className='flex flex-row justify-between px-4 py-4 fixed w-full bg-black bg-opacity-80 z-50'>
                 <Link to="/" className='opacity-90 hover:opacity-100'>
                     <img 
                     src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
@@ -35,10 +35,10 @@ const NavSm = () => {
                                 Arsenal
                             </h5>
                         </Link>
-                        <Link to="/weapons">
+                        <Link to="/agents">
                             <h5 
                             className='hover:text-red-500 font-semibold '>
-                                Weapons
+                                Agents
                             </h5>
                         </Link>
                         <Link to="/weapons">
@@ -57,7 +57,7 @@ const NavSm = () => {
 const NavLg = () => {
     return(
         <>
-            <div className='px-4 py-4 flex flex-row gap-2 justify-between h-auto fixed top-0 left-0 w-full bg-black bg-opacity-80'>
+            <div className='px-4 py-4 flex flex-row gap-2 justify-between h-auto fixed top-0 left-0 w-full bg-black bg-opacity-80 z-50'>
                 <Link to="/" className='opacity-90 hover:opacity-100'>
                     <img 
                     src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
@@ -72,10 +72,10 @@ const NavLg = () => {
                             Arsenal
                         </h5>
                     </Link>
-                    <Link to="/weapons">
+                    <Link to="/agents">
                         <h5 
                         className='hover:text-red-500 font-semibold '>
-                            Weapons
+                            Agents
                         </h5>
                     </Link>
                     <Link to="/weapons">
