@@ -14,7 +14,7 @@ const WeaponInfoPage = () => {
             setWeaponData(fetchWeaponData.data.data);
         }
         apiGetWeapon();
-    },[]);
+    },[weaponId]);
     return (
         <div>
             <WeaponInfoPoster {...getWeaponData} />
