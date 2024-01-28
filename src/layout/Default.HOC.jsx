@@ -10,11 +10,12 @@ const DefaultHOC = (Component) =>
 ({...props}) => {
     var bgPosterLink;
     var bgVideoLink;
-    if(Component.name === 'HomePage'){
+    if(Component.name === 'HomePage' ){
         bgPosterLink = process.env.REACT_APP_HOME_PAGE_BG_POSTER;
         bgVideoLink = process.env.REACT_APP_HOME_PAGE_BG_VIDEO;
     }
-    else if(Component.name === 'AgentPage'){
+    // else if(Component.name === 'AgentPage' || Component.name === 'ArsenalPage' )
+    else{
         bgPosterLink=process.env.REACT_APP_AGENTS_PAGE_BG_POSTER;
         bgVideoLink=process.env.REACT_APP_AGENTS_PAGE_BG_VIDEO;
     }

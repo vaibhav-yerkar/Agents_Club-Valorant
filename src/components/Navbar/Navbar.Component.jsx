@@ -20,6 +20,7 @@ const NavSm = () => {
                     <img 
                     src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
                     alt="Valorant-Home"
+                    draggable={false}
                     className='aspect-auto w-20'
                     />
                 </Link>
@@ -62,6 +63,7 @@ const NavLg = () => {
                     <img 
                     src={process.env.REACT_APP_NAVBAR_VALORANT_LOGO} 
                     alt="Valorant-Home"
+                    draggable={false}
                     className='aspect-auto w-20'
                     />
                 </Link>

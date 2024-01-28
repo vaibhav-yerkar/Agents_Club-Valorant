@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DefaultHOC from '../layout/Default.HOC';
 
+import ArsenalPoster from '../components/Poster/ArsenalPoster.Component';
+
 const ArsenalPage = () => {
     const[getWeaponData, setWeaponData] = useState([]);
     useEffect(()=>{
@@ -13,7 +15,10 @@ const ArsenalPage = () => {
     },[]);
     const weaponDataArray = [...getWeaponData];
     return (
-        <div>Arsenal.Page</div>
+        <div>
+            <div style={{height: '50vh'}}></div>
+            <ArsenalPoster props={weaponDataArray} />
+        </div>
     )
 }
 

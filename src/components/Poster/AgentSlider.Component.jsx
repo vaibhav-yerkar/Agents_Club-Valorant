@@ -21,6 +21,25 @@ const AgentSlider = ({props}) => {
             setCenteredIndex(index);
         },
     };
+    const AgentAbilitySection = (item)=> {
+        const { element , index } = item;
+        return(
+            <>
+                <button className='max-w-16 max-h-24 overflow-y-clip'>
+                    <div className='flex flex-col flex-nowrap gap-1 '>
+                            <img 
+                            src={element.displayIcon}
+                            alt={element.slot}
+                            draggable={false}
+                            className='bg-black max-w-12 min-w-4 max-h-12 min-h-4 hover:invert border-2 self-center'/>
+                            <h6 className='text-red-500 text-center text-xs sm:text-sm md:text-base text'>
+                                {element.displayName}
+                            </h6>
+                    </div>
+                </button>
+            </>
+        );
+    }
 
     const AgentAbilityDemoClip = ()=>{
         return(
@@ -45,6 +64,8 @@ const AgentSlider = ({props}) => {
                                 </h2>
                                 <img 
                                 src={item.role.displayIcon}
+                                alt=''
+                                draggable={false}
                                 className='bg-red-500 rounded-2xl w-8 h-8 drop-shadow-lg scale-50 xsm:scale-75 sm:scale-100'/>
                             </div>
                             <div className='w-full'>
@@ -53,17 +74,19 @@ const AgentSlider = ({props}) => {
                         </div>
                         <img 
                         src={item.displayIconSmall}
+                        alt=''
+                        draggable={false}
                         className='brightness-75 rounded-md drop-shadow-xl border-y-4 border-red-600 max-w-64 max-h-64 min-w-28 min-h-28'/>
                     </div>
-                    <div>
+                    <div className='py-14'>
                         {/* ability */}
-                        <div className='flex flex-row flex-nowrap gap-1 justify-evenly py-4'>
+                        {/* //todo: make another function for abilities  */}
+                        <div className='flex flex-row flex-wrap gap-1 justify-evenly py-4'>
                             {item.abilities.map((element,index)=>{
                                 return(
-                                <img 
-                                src={element.displayIcon}
-                                key={index}
-                                className='rounded-full bg-black border-2 opacity-40 hover:invert duration-100 max-w-12 max-h-12 min-w-6 min-h-6 '/>
+                                    element.slot === 'Passive'?
+                                    <></>:
+                                    <AgentAbilitySection {...{element,index}} key={index} />
                                 )
                             })}
                         </div>
@@ -85,6 +108,8 @@ const AgentSlider = ({props}) => {
                             <div key={index} className='flex flex-row flex-nowrap relative animate-float ease-in-out min-w-20'>
                                 <img 
                                 src={props.background} 
+                                alt=''
+                                draggable={false}
                                 className='z-0 h-auto w-auto absolute opacity-50 animate-flicker ease-in-out' 
                                 />
                                 <div className='z-10 bg-contain backdrop-blur-0 w-full'>    
@@ -100,8 +125,10 @@ const AgentSlider = ({props}) => {
                     <div className='bg-white h-auto w-full'>
                         {
                             props[centeredIndex]!==undefined?
-                            <AgentInfoSection {...props[centeredIndex]}/>:
-                            <img src={process.env.REACT_APP_AGENTS_PAGE_DEFAULT_INFO_SECTION_BG_IMG} />
+                            <AgentInfoSection {...props[centeredIndex]} key={centeredIndex}/>:
+                            <img 
+                            src={process.env.REACT_APP_AGENTS_PAGE_DEFAULT_INFO_SECTION_BG_IMG}
+                            alt='' />
                         }
                         
                     </div>
