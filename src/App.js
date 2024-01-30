@@ -18,7 +18,7 @@ axios.defaults.params = {};
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
+      <Route path="*" element={<HomePage />}></Route>
       <Route path="/agents" element={<AgentPage />}></Route>
       <Route path="/weapons" element={<ArsenalPage />}></Route>
       <Route path="/weapons/:id" element={<WeaponInfoPage />}></Route>
