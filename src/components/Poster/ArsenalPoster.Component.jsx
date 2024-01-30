@@ -10,7 +10,7 @@ const ArsenalPoster = ({props}) => {
                     return(
                         <div 
                         key={index} 
-                        className='flex flex-col flex-nowrap bg-gray-500 rounded-lg bg-opacity-40 px-2 py-2 backdrop-blur-sm'>
+                        className='flex flex-col flex-nowrap bg-gray-600 rounded-lg bg-opacity-40 px-2 py-2 backdrop-blur-sm'>
                             <div className='flex flex-row-reverse flex-nowrap py-2 px-5'>
                                 <Link to={`/weapons/${item.uuid}`}>
                                     <p className='text-gray-400 hover:font-semibold hover:text-gray-300'>See More </p>

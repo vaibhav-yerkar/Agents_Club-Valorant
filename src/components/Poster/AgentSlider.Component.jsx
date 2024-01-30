@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 
 const AgentSlider = ({props}) => {
     const [centeredIndex, setCenteredIndex] = useState(0);
+    const [abilityDescription, setAbilityDescription] = useState({description:props.description});
 
     const settings = {
         initialSilde: 0,
@@ -18,40 +19,51 @@ const AgentSlider = ({props}) => {
         speed: 800,
         easing: 'ease-in-out',
         afterChange: (index)=>{
+            setAbilityDescription([]);
             setCenteredIndex(index);
         },
     };
+
+    const AbilityDescriptiion =(element) =>{
+        setAbilityDescription(element);
+    }
+
+    const Description= ({description})=>{
+        return(
+            <div>
+                <h4 className='text-red-600 font-semibold tracking-wider backdrop-saturate-0'>
+                    {description}
+                </h4>
+            </div>
+        )
+    }
+
     const AgentAbilitySection = (item)=> {
         const { element , index } = item;
         return(
-            <>
-                <button className='max-w-16 max-h-24 overflow-y-clip'>
-                    <div className='flex flex-col flex-nowrap gap-1 '>
+            <div key={index}>
+                <button className='max-w-16 max-h-24'>
+                    <div className='flex flex-col flex-nowrap gap-1 text-black hover:invert '
+                    onClick={()=>AbilityDescriptiion({description: element.description})}>
                             <img 
                             src={element.displayIcon}
                             alt={element.slot}
                             draggable={false}
-                            className='bg-black max-w-12 min-w-4 max-h-12 min-h-4 hover:invert border-2 self-center'/>
-                            <h6 className='text-red-500 text-center text-xs sm:text-sm md:text-base text'>
+                            className='bg-black max-w-12 min-w-4 max-h-12 min-h-4 border-2 self-center border-black hover:border-white'
+                            />
+                            <h6 className='text-center text-xs sm:text-sm md:text-base text backdrop-saturate-0 font-semibold'>
                                 {element.displayName}
                             </h6>
                     </div>
                 </button>
-            </>
+            </div>
         );
-    }
-
-    const AgentAbilityDemoClip = ()=>{
-        return(
-            <>
-            </>
-        )
     }
 
     const AgentInfoSection = (item)=>{
         return(
         <>
-            <div className='w-full h-full bg-opacity-30 brightness-150 bg-cover px-4 py-4' style={{background: `url(${process.env.REACT_APP_AGENT_PAGE_INFO_SECTION_BG_IMG})` }}>
+            <div className='w-full h-full brightness-150 bg-cover px-4 py-4' style={{background: `url(${process.env.REACT_APP_AGENT_PAGE_INFO_SECTION_BG_IMG})`, backgroundColor:'rgba(0,0,0,0.4)', backgroundBlendMode:'multiply'}}>
                 <div className='flex flex-col gap-2 z-10'>
                     <div className='flex flex-row flex-wrap gap-4 w-full justify-between shrink'>
                         <div className='flex flex-col flex-nowrap gap-3 px-2 sm:px-4 py-2 w-3/4 sm:w-2/4'>
@@ -69,7 +81,7 @@ const AgentSlider = ({props}) => {
                                 className='bg-red-500 rounded-2xl w-8 h-8 drop-shadow-lg scale-50 xsm:scale-75 sm:scale-100'/>
                             </div>
                             <div className='w-full'>
-                                <p className='text-gray-500  py-3 text-xs xsm:text-sm sm:text-lg md:text-xl text font-semibold'>{item.description}</p>
+                                <p className='text-gray-600  py-3 text-xs xsm:text-sm sm:text-lg md:text-xl text font-semibold'>{item.description}</p>
                             </div>
                         </div>
                         <img 
@@ -79,8 +91,6 @@ const AgentSlider = ({props}) => {
                         className='brightness-75 rounded-md drop-shadow-xl border-y-4 border-red-600 max-w-64 max-h-64 min-w-28 min-h-28'/>
                     </div>
                     <div className='py-14'>
-                        {/* ability */}
-                        {/* //todo: make another function for abilities  */}
                         <div className='flex flex-row flex-wrap gap-1 justify-evenly py-4'>
                             {item.abilities.map((element,index)=>{
                                 return(
@@ -90,8 +100,10 @@ const AgentSlider = ({props}) => {
                                 )
                             })}
                         </div>
+                        <div className='w-full px-8 py-6'>
+                            <Description {...abilityDescription} />
+                        </div>
                     </div>
-                    <AgentAbilityDemoClip />
                 </div>
             </div>
         </>

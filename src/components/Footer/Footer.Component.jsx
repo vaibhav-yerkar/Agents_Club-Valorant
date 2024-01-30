@@ -27,7 +27,7 @@ const HackerrankIcon = styled(SiHackerrank)`
         filter: brightness(1);
         transition: filter 80ms ease-in-out;
     }
-    filter: brightness(0.5);
+    filter: brightness(0.7);
     font-size: 2.5rem;
     border-radius: 6px;
     color: rgb(20,24,31);
@@ -39,7 +39,7 @@ const LinkedInIcon = styled(AiOutlineLinkedin)`
         filter: brightness(1);
         transition: filter 80ms ease-in-out;
     }
-    filter: brightness(0.5);
+    filter: brightness(0.7);
     font-size: 2.5rem;
     border-radius: 6px;
     background-color: rgb(14,79,181);
@@ -50,7 +50,7 @@ const GithubIcon = styled(AiFillGithub)`
         filter: brightness(1);
         transition: filter 80ms ease-in-out;
     }
-    filter: brightness(0.5);
+    filter: brightness(0.7);
     font-size: 2.5rem;
     color: rgb(250,249,245);
     border-radius: 4px;
@@ -59,8 +59,8 @@ const GithubIcon = styled(AiFillGithub)`
 
 const Footer = () => {
     return (
-        <> 
-            <div className='bg-black bg-opacity-50 w-full h-auto flex flex-col flex-nowrap gap-3 py-auto pb-8'>
+        <div className='pt-20'> 
+            <div className='bg-black bg-opacity-60 w-full h-auto flex flex-col flex-nowrap gap-3 py-auto pb-8'>
                 <div className='h-1/4'></div>
                 <div className='flex flex-col flex-wrap justify-center gap-x-80 pt-10 gap-y-12'>
                     <div className='flex flex-row gap-x-16 gap-y-10 justify-center flex-wrap'>
@@ -90,7 +90,8 @@ const Footer = () => {
                             <p className='text-center tracking-wide'>
                                 {process.env.REACT_APP_FOOTER_NOTE}
                             </p>
-                            <p className='text-center pt-1'>
+                            <br />
+                            <p className='text-center'>
                                 2024 Vaibhav Yerkar. All rights reserved.
                             </p>
                         </div>
@@ -121,7 +122,7 @@ const Footer = () => {
                 </div>
                 <div className='h-1/4'></div>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -25,7 +25,7 @@ const WeaponInfoPoster= (props) => {
 
     return (
         <>
-            <div className='flex flex-col flex-nowrap gap-4'>
+            <div className='flex flex-col flex-nowrap gap-10'>
                 <div className='flex flex-row flex-wrap gap-x-4 gap-y-3 justify-evenly' style={{ height: '75vh' }}>
                     <div className='w-full md:w-2/5 bg-gray-700 rounded-lg bg-opacity-50 flex flex-col justify-center'>
                         {props.weaponStats === undefined || props.weaponStats === null ?
@@ -67,19 +67,21 @@ const WeaponInfoPoster= (props) => {
                     <div className='flex gap-x-3 gap-y-3 flex-wrap justify-evenly'>
                         {props.skins !== undefined ? props.skins.map((item, index) => {
                             if (item.displayName !== 'Random Favorite Skin') {
-                                if(item.displayName.includes('Standard')){
-                                    item = props;
+                                if(item.displayIcon!==null){
+                                    if(item.displayName.includes('Standard')){
+                                        item = props;
+                                    }
+                                    return (
+                                        <div key={index} className='bg-gray-700 rounded-lg bg-opacity-50'>
+                                            <img
+                                            src={item.displayIcon}
+                                            alt=""
+                                            onClick={() => changeSkinImg({ displayName: item.displayName, displayIcon: item.displayIcon })}
+                                            className='aspect-auto max-h-24 px-5 py-5 z-20 drop-shadow-xl'
+                                            />
+                                        </div>
+                                    );
                                 }
-                                return (
-                                    <div key={index} className='bg-gray-700 rounded-lg bg-opacity-50'>
-                                        <img
-                                        src={item.displayIcon}
-                                        alt=""
-                                        onClick={() => changeSkinImg({ displayName: item.displayName, displayIcon: item.displayIcon })}
-                                        className='aspect-auto max-h-24 px-5 py-5 z-20 drop-shadow-xl'
-                                        />
-                                    </div>
-                                );
                             }
                         }) :
                         ''}

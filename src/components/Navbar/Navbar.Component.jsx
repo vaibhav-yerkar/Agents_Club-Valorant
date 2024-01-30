@@ -10,7 +10,6 @@ const MenuIcon = styled(TiThMenu)`
     color: rgb(255,80,80);
 `;
 
-
 const NavSm = () => {
 
     return (
@@ -42,10 +41,16 @@ const NavSm = () => {
                                 Agents
                             </h5>
                         </Link>
-                        <Link to="/weapons">
+                        <Link to="/maps">
                             <h5 
                             className='hover:text-red-500 font-semibold '>
-                                Contact
+                                Maps
+                            </h5>
+                        </Link>
+                        <Link to="/playercards">
+                            <h5 
+                            className='hover:text-red-500 font-semibold '>
+                                Cards
                             </h5>
                         </Link>
                     </div>
@@ -80,10 +85,16 @@ const NavLg = () => {
                             Agents
                         </h5>
                     </Link>
-                    <Link to="/weapons">
+                    <Link to="/maps">
                         <h5 
                         className='hover:text-red-500 font-semibold '>
-                            Contact
+                            Maps
+                        </h5>
+                    </Link>
+                    <Link to="/playercards">
+                        <h5 
+                        className='hover:text-red-500 font-semibold '>
+                            Cards
                         </h5>
                     </Link>
                 </div>

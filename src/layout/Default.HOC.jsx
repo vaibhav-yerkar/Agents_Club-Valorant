@@ -4,7 +4,6 @@ import React from 'react';
 import Navbar from '../components/Navbar/Navbar.Component.jsx';
 import Footer from '../components/Footer/Footer.Component.jsx';
 
-// {console.log(Component.name)         //gets component's name }
 
 const DefaultHOC = (Component) =>
 ({...props}) => {

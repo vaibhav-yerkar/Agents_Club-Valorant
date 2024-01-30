@@ -1,16 +1,18 @@
 import React from 'react';
-import DefaultHOC from '../layout/Default.HOC';
 // import axios from 'axios';
 
+import DefaultHOC from '../layout/Default.HOC';
 import Poster from '../components/Poster/Poster.Component';
+import RankPage from '../components/Poster/RankSlider.Component';
 
 const HomePage = () => {
 
     
     return (
         <>
-            <div className=''>
+            <div className='flex flex-col gap-28'>
                 <Poster />
+                <RankPage />
             </div>
         </>
     );

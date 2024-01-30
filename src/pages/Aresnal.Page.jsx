@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import DefaultHOC from '../layout/Default.HOC';
 
+import DefaultHOC from '../layout/Default.HOC';
 import ArsenalPoster from '../components/Poster/ArsenalPoster.Component';
 
 const ArsenalPage = () => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import DefaultHOC from '../layout/Default.HOC';
 import axios from 'axios';
 
+import DefaultHOC from '../layout/Default.HOC';
 import WeaponInfoPoster from '../components/Poster/WeaponInfoPoster.Component';
 
 const WeaponInfoPage = () => {
