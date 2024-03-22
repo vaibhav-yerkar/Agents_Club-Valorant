@@ -7,7 +7,6 @@ import RankPage from '../components/Poster/RankSlider.Component';
 
 const HomePage = () => {
 
-    
     return (
         <>
             <div className='flex flex-col gap-28'>

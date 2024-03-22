@@ -1,15 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//React Icon
 import {TiThMenu} from 'react-icons/ti';
+//For icoon stylings
 import styled from 'styled-components';
 import '../../App.css'
 
+//Styling Icon
 const MenuIcon = styled(TiThMenu)`
     padding-top: 0.1rem;
     font-size: 2.4rem;
     color: rgb(255,80,80);
 `;
 
+//general structure
+/**
+ * valorant-logo                menu----icon
+ *                                  menu-content
+ */
 const NavSm = () => {
 
     return (
@@ -59,6 +67,11 @@ const NavSm = () => {
         </>
     );
 }
+
+//general structure
+/**
+ *  valorant-logo            menu-contents
+ */
 
 const NavLg = () => {
     return(

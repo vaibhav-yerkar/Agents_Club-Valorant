@@ -23,14 +23,19 @@
 - Home.Page.jsx
 - Agent.Page.jsx
 - Weapon.Page.jsx
+- Map.Page.jsx
+- Arsenal.Page.jsx
+- Cards.Page.jsx
 
 ### Layouts/ HOC:
 - Default.HOC.jsx
 
 ### Components:
-- Navbar    Navbar.Component.jsx
-- Agent     Agent.Component.jsx
-- Weapons   Weapons.Component.jsx
-            WeaponInfo.Component.jsx
-- Footer    Footer.Component.jsx
+- Navbar    :   Navbar.Component.jsx
+- Footer    :   Footer.Component.jsx
+- Agent     :   AgentSlider.Component.jsx
+- Weapons   :   ArsenalPoster.Component.jsx
+                WeaponsInfoPoster.Component.jsx
+- HomePage  :   Poster.Component.jsx
+                RankSlider.jsx
 

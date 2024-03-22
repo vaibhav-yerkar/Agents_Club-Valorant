@@ -1,9 +1,13 @@
 import React from 'react';
+
+// React Icons
 import { AiOutlineLinkedin, AiFillGithub} from "react-icons/ai";
 import { SiValorant, SiRiotgames, SiHackerrank } from "react-icons/si";
+
+// Module for styling Icons
 import styled from 'styled-components';
 
-
+//Icon Styling
 const RiotIcon = styled(SiRiotgames)`
     &:hover{
         transition: filter 100ms ease-in-out;
@@ -20,7 +24,6 @@ const ValorantIcon = styled(SiValorant)`
     filter: brightness(0.6);
     font-size: 2.4rem;
 `;
-
 
 const HackerrankIcon = styled(SiHackerrank)`
     &:hover{
@@ -56,6 +59,13 @@ const GithubIcon = styled(AiFillGithub)`
     border-radius: 4px;
     background-color: rgb(20,30,24);
 `;
+
+// general Structure 
+/**
+ *              riot-icon      valorant-icon
+ *                      footer Note
+ *      github-icon     linkedin-icon   hackerrank-icon
+ */
 
 const Footer = () => {
     return (
