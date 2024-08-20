@@ -15,6 +15,7 @@ const CardsPage = () => {
         apiGetplayerCardData();
     },[]);
 
+    
     const settings = {
         slidesToShow:3,
         rows:4,

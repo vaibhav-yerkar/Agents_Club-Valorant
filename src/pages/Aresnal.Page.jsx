@@ -14,6 +14,7 @@ const ArsenalPage = () => {
         apiGetWeapons();
     },[]);
     const weaponDataArray = [...getWeaponData];
+    
     return (
         <div>
             <div style={{height: '50vh'}}></div>

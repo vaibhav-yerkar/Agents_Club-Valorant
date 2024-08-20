@@ -15,6 +15,7 @@ const AgentSlider = () => {
         }
         apiGetAgentData();
     },[]);
+    
     var agentDataArray = [...getAgentsData];
     agentDataArray = agentDataArray.filter((item)=> item.isPlayableCharacter === true);
     const props = agentDataArray;

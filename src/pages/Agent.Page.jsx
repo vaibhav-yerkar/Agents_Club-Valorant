@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import AgentSlider from '../components/Poster/AgentSlider.Component';
 import DefaultHOC from '../layout/Default.HOC';
 

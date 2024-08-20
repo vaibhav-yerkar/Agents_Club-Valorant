@@ -25,7 +25,6 @@ const MapPage = () => {
         swipeToSilde: true,
         speed: 800,
         easing: 'ease-in-out',
-
     };
 
     return (

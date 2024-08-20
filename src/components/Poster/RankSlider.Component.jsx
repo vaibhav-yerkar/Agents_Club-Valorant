@@ -3,6 +3,7 @@ import axios from 'axios';
 import Slider from 'react-slick';
 
 const RankPage = () => {
+  
     const [rankTierData, setRankTierData] = useState([]);
     const settings = {
         slidesToShow:1,

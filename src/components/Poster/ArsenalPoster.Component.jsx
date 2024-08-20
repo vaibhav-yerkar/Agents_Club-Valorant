@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const ArsenalPoster = ({props}) => {
-
     return (
         <>
             <div className='flex flex-col lg:gap-4 md:gap-3 gap-2 lg:px-5 md:px-3 px-2 lg:py-5 md:py-3 py-2'>

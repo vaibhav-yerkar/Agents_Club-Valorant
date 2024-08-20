@@ -5,7 +5,6 @@ const Poster = (props) => {
     return (
         <>
             <section style={{height:'45vh'}}>
-
             </section>
             <section
             className='bg-opacity-90 bg-red-500 text-white h-svh bg-cover overflow-hidden'>

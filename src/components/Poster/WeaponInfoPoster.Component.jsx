@@ -14,7 +14,6 @@ const WeaponInfoPoster= () => {
     },[weaponId]);
     const props = getWeaponData;
 
-
     const [selectedSkin, setSelectedSkin] = useState({ displayName: props.displayName, displayIcon: props.displayIcon });
     
     const changeSkinImg = (selectedSkin) => {
