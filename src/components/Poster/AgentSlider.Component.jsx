@@ -15,7 +15,7 @@ const AgentSlider = () => {
         }
         apiGetAgentData();
     },[]);
-    
+
     var agentDataArray = [...getAgentsData];
     agentDataArray = agentDataArray.filter((item)=> item.isPlayableCharacter === true);
     const props = agentDataArray;
@@ -61,7 +61,6 @@ const AgentSlider = () => {
                     onClick={()=>AbilityDescriptiion({description: element.description})}>
                             <img 
                             src={element.displayIcon}
-                            loading='lazy'
                             alt={element.slot}
                             draggable={false}
                             className='bg-black max-w-12 min-w-4 max-h-12 min-h-4 border-2 self-center border-black hover:border-white'
