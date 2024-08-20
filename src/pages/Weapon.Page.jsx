@@ -8,18 +8,18 @@ import DefaultHOC from '../layout/Default.HOC';
 import WeaponInfoPoster from '../components/Poster/WeaponInfoPoster.Component';
 
 const WeaponInfoPage = () => {
-    const weaponId = useParams();
-    const[getWeaponData, setWeaponData] = useState([]);
-    useEffect(()=>{
-        const apiGetWeapon = async ()=>{
-            const fetchWeaponData = await axios.get(`/weapons/${weaponId.id}`);
-            setWeaponData(fetchWeaponData.data.data);
-        }
-        apiGetWeapon();
-    },[weaponId]);
+    // const weaponId = useParams();
+    // const[getWeaponData, setWeaponData] = useState([]);
+    // useEffect(()=>{
+    //     const apiGetWeapon = async ()=>{
+    //         const fetchWeaponData = await axios.get(`/weapons/${weaponId.id}`);
+    //         setWeaponData(fetchWeaponData.data.data);
+    //     }
+    //     apiGetWeapon();
+    // },[weaponId]);
     return (
         <div>
-            <WeaponInfoPoster {...getWeaponData} />
+            <WeaponInfoPoster />
         </div>
     )
 }

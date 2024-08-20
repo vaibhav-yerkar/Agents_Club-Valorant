@@ -116,6 +116,7 @@ const CardsPage = () => {
                                         <img 
                                         src={item.displayIcon} 
                                         alt=""
+                                        loading='lazy'
                                         className='brightness-75 hover:brightness-110 duration-75'
                                         onClick={()=>changeViewCard({displayName:`${item.displayName}`,largeArt:`${item.largeArt}` })}/>
                                     </div>

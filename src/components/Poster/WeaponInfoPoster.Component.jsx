@@ -1,6 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-const WeaponInfoPoster= (props) => {
+const WeaponInfoPoster= () => {
+    const weaponId = useParams();
+    const[getWeaponData, setWeaponData] = useState([]);
+    useEffect(()=>{
+        const apiGetWeapon = async ()=>{
+            const fetchWeaponData = await axios.get(`/weapons/${weaponId.id}`);
+            setWeaponData(fetchWeaponData.data.data);
+        }
+        apiGetWeapon();
+    },[weaponId]);
+    const props = getWeaponData;
+
+
     const [selectedSkin, setSelectedSkin] = useState({ displayName: props.displayName, displayIcon: props.displayIcon });
     
     const changeSkinImg = (selectedSkin) => {
@@ -14,6 +28,7 @@ const WeaponInfoPoster= (props) => {
                     <img
                     src={displayIcon}
                     alt=""
+                    loading='lazy'
                     draggable={false}
                     className='w-auto h-auto'
                     />

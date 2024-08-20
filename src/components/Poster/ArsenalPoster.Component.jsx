@@ -29,6 +29,7 @@ const ArsenalPoster = ({props}) => {
                                 <div>
                                     <img 
                                     src={item.displayIcon} 
+                                    loading='lazy'
                                     alt={`${item.displayName}'s img`} 
                                     draggable={false}
                                     className='max-w-auto min-w-auto max-h-40 min-h-20 z-20 drop-shadow-xl brightness-110'

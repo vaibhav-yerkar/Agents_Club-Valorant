@@ -45,6 +45,7 @@ const MapPage = () => {
                                         <img 
                                         src={item.splash} 
                                         alt="" 
+                                        loading='lazy'
                                         draggable={false}
                                         className='block'/>
                                     </div>

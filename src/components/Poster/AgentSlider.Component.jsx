@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
 
-const AgentSlider = ({props}) => {
+const AgentSlider = () => {
+    const [getAgentsData,setAgentsData]= useState([]);
+    useEffect(()=>{
+        const apiGetAgentData = async()=>{
+            const fetchAgentData = await axios.get('/agents');
+            setAgentsData(fetchAgentData.data.data);
+        }
+        apiGetAgentData();
+    },[]);
+    var agentDataArray = [...getAgentsData];
+    agentDataArray = agentDataArray.filter((item)=> item.isPlayableCharacter === true);
+    const props = agentDataArray;
+
     const [centeredIndex, setCenteredIndex] = useState(0);
     const [abilityDescription, setAbilityDescription] = useState({description:props.description});
 
@@ -47,6 +60,7 @@ const AgentSlider = ({props}) => {
                     onClick={()=>AbilityDescriptiion({description: element.description})}>
                             <img 
                             src={element.displayIcon}
+                            loading='lazy'
                             alt={element.slot}
                             draggable={false}
                             className='bg-black max-w-12 min-w-4 max-h-12 min-h-4 border-2 self-center border-black hover:border-white'
@@ -77,6 +91,7 @@ const AgentSlider = ({props}) => {
                                 <img 
                                 src={item.role.displayIcon}
                                 alt=''
+                                loading='lazy'
                                 draggable={false}
                                 className='bg-red-500 rounded-2xl w-8 h-8 drop-shadow-lg scale-50 xsm:scale-75 sm:scale-100'/>
                             </div>
@@ -87,6 +102,7 @@ const AgentSlider = ({props}) => {
                         <img 
                         src={item.displayIconSmall}
                         alt=''
+                        loading='lazy'
                         draggable={false}
                         className='brightness-75 rounded-md drop-shadow-xl border-y-4 border-red-600 max-w-64 max-h-64 min-w-28 min-h-28'/>
                     </div>
@@ -121,11 +137,13 @@ const AgentSlider = ({props}) => {
                                 <img 
                                 src={props.background} 
                                 alt=''
+                                loading='lazy'
                                 draggable={false}
                                 className='z-0 h-auto w-auto absolute opacity-50 animate-flicker ease-in-out' 
                                 />
                                 <div className='z-10 bg-contain backdrop-blur-0 w-full'>    
                                     <img 
+                                    loading='lazy'
                                     src={props.fullPortraitV2} 
                                     alt={`${props.displayName}`} 
                                     className='w-full h-auto'

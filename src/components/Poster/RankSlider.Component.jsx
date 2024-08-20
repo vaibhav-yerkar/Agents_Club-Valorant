@@ -97,7 +97,7 @@ const RankPage = () => {
                                         className='-translate-y-20 scale-125 z-10'/>
                                         <div 
                                         className='text-center z-10 text-black backdrop-contrast-50'>
-                                            <h1 className='font-normal'>{item.tierName}</h1>
+                                            <h1 className='font-normal text-sm'>{item.tierName}</h1>
                                             <h1 className='font-black py-3'>{item.divisionName}</h1>
                                         </div>
                                     </div>
