@@ -34,7 +34,7 @@ const Poster = (props) => {
 
             </section>
             <section>
-                <div className='bg-gray-100 text-black h-1/3'>
+                <div className='bg-gray-100 text-black aspect-video w-full'>
                     <div className='flex flex-col gap-7 px-8 py-10'>
                         <div className='flex flex-row flex-nowrap justify-between'>
                             <h2 className='font-black lg:text-4xl md:text-3xl sm:text-2xl xsm:text-xl text-lg text-red-500'>YOUR MAPS</h2>
@@ -52,7 +52,7 @@ const Poster = (props) => {
                         </p>
                     </div>
                     <br />
-                    <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt02c83424f7b41a97/6243813d8850ee0e8ea0ae56/maps-03ebbf2c074f13a65af1dba0c80f767e.png" alt="" 
+                    <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/65c45804e00ee97977b6eef06da370543968d161-1232x1232.png?auto=format&fit=fill&q=80&w=1232" alt="" 
                     loading='lazy'
                     className='w-full'/>
                 </div>
