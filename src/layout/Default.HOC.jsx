@@ -19,7 +19,7 @@ const DefaultHOC = (Component) =>
         bgVideoLink=process.env.REACT_APP_AGENTS_PAGE_BG_VIDEO;
     }
     return (
-        <div className='font-orb'>
+        <div className='font-orb bg-black'>
             <video
                 tabIndex="-1"
                 preload='true'
